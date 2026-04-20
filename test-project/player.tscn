@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://coplxaemyo182"]
+
+[ext_resource type="Texture2D" uid="uid://cxx30wtek712x" path="res://Assets/Sprites/Brawler-Girl/Idle/idle1.png" id="1_bwjto"]
+[ext_resource type="Texture2D" uid="uid://br34wp0f2f0yr" path="res://Assets/Sprites/Brawler-Girl/Idle/idle2.png" id="2_606se"]
+[ext_resource type="Texture2D" uid="uid://ckhyv7ut8m04s" path="res://Assets/Sprites/Brawler-Girl/Idle/idle3.png" id="3_u1c27"]
+[ext_resource type="Texture2D" uid="uid://ser3b62jr7k" path="res://Assets/Sprites/Brawler-Girl/Idle/idle4.png" id="4_op7ga"]
+[ext_resource type="Texture2D" uid="uid://duil4t8hisltk" path="res://Assets/Sprites/Brawler-Girl/Walk/walk1.png" id="5_q13i1"]
+[ext_resource type="Texture2D" uid="uid://darewhb1re1fu" path="res://Assets/Sprites/Brawler-Girl/Walk/walk2.png" id="6_pylmc"]
+[ext_resource type="Texture2D" uid="uid://bqlu7s6ipahvx" path="res://Assets/Sprites/Brawler-Girl/Walk/walk3.png" id="7_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://dl148k775d846" path="res://Assets/Sprites/Brawler-Girl/Walk/walk4.png" id="8_5tmop"]
+[ext_resource type="Texture2D" uid="uid://xu270xbbp8sd" path="res://Assets/Sprites/Brawler-Girl/Walk/walk5.png" id="9_7ahtn"]
+[ext_resource type="Texture2D" uid="uid://pp24yh33tr53" path="res://Assets/Sprites/Brawler-Girl/Walk/walk6.png" id="10_7lmhl"]
+[ext_resource type="Texture2D" uid="uid://cjbh63eq53qoa" path="res://Assets/Sprites/Brawler-Girl/Walk/walk7.png" id="11_dx0e4"]
+[ext_resource type="Texture2D" uid="uid://d3706lpmij5nd" path="res://Assets/Sprites/Brawler-Girl/Walk/walk8.png" id="12_jm5j8"]
+[ext_resource type="Texture2D" uid="uid://e8jpdeilj45m" path="res://Assets/Sprites/Brawler-Girl/Walk/walk9.png" id="13_7hik5"]
+[ext_resource type="Texture2D" uid="uid://d3cqkx4ljjvvl" path="res://Assets/Sprites/Brawler-Girl/Walk/walk10.png" id="14_qtqh7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2wuci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_op7ga")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5tmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7ahtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7lmhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dx0e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jm5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7hik5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qtqh7")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iruf7"]
+size = Vector2(25, 47)
+
+[node name="Player" type="CharacterBody2D" unique_id=1996876087]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1344266851]
+sprite_frames = SubResource("SpriteFrames_2wuci")
+animation = &"Idle"
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=673495297]
+position = Vector2(-2.5, 8.5)
+shape = SubResource("RectangleShape2D_iruf7")
