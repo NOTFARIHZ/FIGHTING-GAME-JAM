@@ -87,3 +87,5 @@ animation = &"Idle"
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=673495297]
 position = Vector2(-2.5, 8.5)
 shape = SubResource("RectangleShape2D_iruf7")
+
+[node name="State Machine" type="Node2D" parent="." unique_id=311672970]
